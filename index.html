@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>⊹₊⟡⋆ Minicomponente ⊹₊⟡⋆</title>
+
+<link rel="icon" type="image/png"
+href="https://images.prismic.io/minicomponente/agcyRaYofJOwHRxS_angel_icon.png?auto=format,compress">
+
+<style>
+
+/* CURSOR GLOBAL */
+* {
+    cursor: url("https://images.prismic.io/minicomponente/agdCRKYofJOwHR5L_cursorbless.tiff?auto=format,compress"), auto !important;
+}
+
+/* BACKGROUND */
+body {
+    background-color: #f5abff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* IMAGEN PRINCIPAL */
+img {
+    width: 1500px;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    position: relative;
+}
+
+/* BOTONES */
+.boton {
+    position: absolute;
+    padding: 12px 20px;
+    border: none;
+    background-color: #f269c2;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-weight: 900;
+    font-size: 14px;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.boton:hover {
+    background-color: #f2a2c2;
+    transform: scale(1.2);
+}
+
+/* GIFS FLOTANTES */
+.floaty {
+    position: absolute;
+    pointer-events: none;
+    z-index: 5;
+
+    animation: flotar 6s ease-in-out infinite;
+}
+
+/* ANIMACION */
+@keyframes flotar {
+
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(12px, -10px);
+    }
+
+    50% {
+        transform: translate(-8px, -18px);
+    }
+
+    75% {
+        transform: translate(-14px, 8px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* POSICIONES */
+.btn1 { top: 20%; left: 15%; }
+.btn2 { top: 50%; left: 10%; }
+.btn3 { top: 75%; left: 70%; }
+.btn4 { top: 75%; left: 90%; }
+.btn5 { top: 35%; left: 20%; }
+
+/* OVERLAY */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* WINAMP STYLE WINDOW */
+.modal-content {
+    width: 420px;
+    max-height: 80vh;
+
+    background: #c0c0c0;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0px #000;
+
+    font-family: "Tahoma", "Arial", sans-serif;
+    color: black;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITLE BAR */
+.winbar {
+    background: linear-gradient(to right, #000080, #0000ff);
+    color: white;
+    padding: 6px 8px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+/* CLOSE ICON */
+.close {
+    width: 18px;
+    height: 18px;
+}
+
+/* BODY CONTENT */
+.wincontent {
+    padding: 12px;
+    font-size: 14px;
+    background: #c0c0c0;
+
+    overflow-y: auto;
+    max-height: 60vh;
+
+    scrollbar-color: #a0a0a0 #c0c0c0;
+    scrollbar-width: auto;
+}
+
+/* SCROLLBAR WINAMP / WIN98 */
+.wincontent::-webkit-scrollbar {
+    width: 16px;
+}
+
+.wincontent::-webkit-scrollbar-track {
+    background: #c0c0c0;
+    border-left: 2px solid #808080;
+}
+
+.wincontent::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border: 2px outset #fff;
+}
+
+.wincontent::-webkit-scrollbar-thumb:hover {
+    background: #8a8a8a;
+}
+
+/* LINKS */
+.wincontent a {
+    color: black;
+    text-decoration: underline;
+}
+
+.wincontent a:hover {
+    color: #0000ff;
+}
+
+/* IMAGE INSIDE MODAL */
+.wincontent img {
+    width: 100%;
+    margin-top: 10px;
+    border: 2px inset #fff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <img src="https://images.prismic.io/minicomponente/agYX1aYofJOwHQXX_01.jpg?auto=format,compress" alt="<3">
+
+    <!-- GIFS FLOTANTES -->
+    <img class="floaty" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnBpdGhtMjlyZ2w5ZHYwaTA3eW5lMDFkM2E5bmMybWN2NmR0aTQ2cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7qDEFrioqqj5MlrO/giphy.gif">
+    <img class="floaty" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGJrOHJuMWtrdWFpMWN0NGkzdDkyY3BoY3Fqc2ZocmV1d2JjOTRpbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5YYrAjDYJWbS/giphy.gif">
+    <img class="floaty" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnY3aDNzMXdpczAycGZrYmRsZGN6dHFscXM5cGhjbGFseTV1cDl3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v7HSXx8kLYM8GC1ROP/giphy.gif">
+    <img class="floaty" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDBjNGZwOG0wZGU4bXA1eTVvbnh1eGJ2ZTF1MTdnYXI5am9ibDVhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RvM4XTjdiFBwQ28R3y/giphy.gif">
+    <img class="floaty" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXkzZjByYnBvbmIzOHExNThuenVkaHQ5dGdiZ3pmOW9tbHhvMGZrZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hhYDWei0c7pDy/giphy.gif">
+
+    <button class="boton btn1" onclick="openModal('bio')">Bio</button>
+    <button class="boton btn2" onclick="openModal('musica')">Música</button>
+    <button class="boton btn3" onclick="openModal('audiovisuales')">Audiovisuales</button>
+    <button class="boton btn4" onclick="openModal('prensa')">Prensa</button>
+    <button class="boton btn5" onclick="openModal('investigacion')">Investigación</button>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="winbar">
+            <span id="modal-title">Ventana</span>
+
+            <img class="close"
+                 onclick="closeModal()"
+                 src="https://images.prismic.io/minicomponente/agsHCqYofJOwHUx5_spider_blanco.png?auto=format,compress">
+        </div>
+
+        <div class="wincontent">
+
+            <div id="modal-text"></div>
+
+            <img id="modal-img" style="display:none;">
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+function openModal(type) {
+
+    const modal = document.getElementById("modal");
+    modal.style.display = "flex";
+
+    const title = document.getElementById("modal-title");
+    const text = document.getElementById("modal-text");
+    const img = document.getElementById("modal-img");
+
+    img.style.display = "none";
+    text.innerHTML = "";
+
+    if (type === "bio") {
+
+        title.innerText = "BIO";
+
+        text.innerHTML = `
+            Minicomponente es una artista multidisciplinaria de Argentina que desde 2007 desarrolla un estilo propio de electrónica low fi al que llama ‘drone pop’, con influencias de las frecuencias de sanación y el drone, la danza Butoh, la tecnología obsoleta y la cultura animé. Tiene diez discos editados en sellos argentinos e internacionales. Su corpus de trabajo incluye desde el fanzine al radioteatro y la composición de música original para cine y videodanza, así como también desde espacios institucionales a antros subterráneos y la vía pública. 
+            <br><br>
+
+            <a href="https://minicomponente.cdn.prismic.io/minicomponente/agiRz6YofJOwHS2t_cv.pdf" target="_blank">
+                CV 𓇢𓆸
+            </a>
+
+            <br><br>
+
+            <a href="https://instagram.com/minicomponente_" target="_blank">
+                Instagram 𓇢𓆸
+            </a>
+
+            <br><br>
+
+            <a href="https://minicomponente.bandcamp.com" target="_blank">
+                Bandcamp 𓇢𓆸
+            </a>
+            
+             <br><br>
+
+            <a href="https://soundcloud.com/minicomponente" target="_blank">
+                Soundcloud 𓇢𓆸
+            </a>
+            
+        `;
+        
+        img.style.display = "block";
+
+        img.src =
+        "https://images.prismic.io/minicomponente/agUr4KYofJOwHPEW_506705181_10235062229152845_6064839782774786392_n.jpg?auto=format,compress";
+        
+
+    } else if (type === "musica") {
+
+        title.innerText = "MÚSICA";
+
+        text.innerHTML = `
+            <a href="https://minicomponente.bandcamp.com" target="_blank">
+                Discografía Completa
+            </a>
+            <br><br>
+            <a href="https://open.spotify.com/intl-es/artist/6KC7Y8Lw9BmbHxpSYANLmx" target="_blank">
+                Spotify
+            </a>
+            <br><br>
+            <a href="https://soundcloud.com/minicomponente" target="_blank">
+                Soundcloud
+            </a>
+            <br><br>
+            <a href="https://www.youtube.com/@minicomponente010101" target="_blank">
+                YouTube
+            </a>
+        `;
+
+    } else if (type === "audiovisuales") {
+
+        title.innerText = "AUDIOVISUALES";
+
+        text.innerHTML = `
+            <b>⋆༺𓆩☠︎︎𓆪༻⋆ Videoclips & Live sets ⋆༺𓆩☠︎︎𓆪༻⋆</b>
+            
+            <br><br>
+
+            <a href="https://www.youtube.com/watch?v=AtxMBDhCAEE" target="_blank">
+                Minicomponente - UWU Session #20
+            </a>
+
+            <br><br>
+
+            <a href="https://www.youtube.com/watch?v=I8BCQibtwa4&t=1782s" target="_blank">
+                Minicomponente & Fiorella16 en vivo en Mun Discos
+            </a>
+
+            <br><br>
+
+            <a href="https://www.youtube.com/watch?v=ZP_sPti5rxc" target="_blank">
+                Contacto - Dirigido por Sofia Benetti
+            </a>
+
+            <br><br>
+
+            <a href="https://www.youtube.com/watch?v=ipkp_0yb630" target="_blank">
+                Mi Escudo - Dirigido por Renata Daguerre
+            </a>
+            
+            <br><br>
+
+            <a href="https://www.youtube.com/watch?v=2IT1NQngyzI" target="_blank">
+                Verde Lir - Dirigido por Paula Lila
+            </a>
+            
+            <br><br>
+
+            <a href="https://vimeo.com/37631550" target="_blank">
+                De Usted - Dirigido por Paula Lila & Aaron Rojas
+            </a>
+            
+            <br><br>
+
+            <a href="https://vimeo.com/154163861" target="_blank">
+                Seno - Dirigido por Paula Lila
+            </a>
+
+            <br><br>
+            
+            <a href="https://vimeo.com/67336567" target="_blank">
+                Regalo Invisible - Dirigido por Paula Lila & David Perales
+            </a>
+
+            <br><br>
+
+            <b> ִֶָ·:*¨༺ ♱✮ ·Creación audio / visual ·✮♱ ༻¨*:</b>
+
+            <br><br>
+
+            <a href="https://vimeo.com/317142565" target="_blank">
+                Reliquia Nuez x Minicomponente
+            </a>
+            
+            <br><br>
+
+            <a href="https://vimeo.com/62777058" target="_blank">
+                Entrega tus manos, te daré mis ojos
+            </a>
+
+            <br><br>
+            
+            <a href="https://vimeo.com/94010487" target="_blank">
+                Sonido Chipadélico
+            </a>
+            
+            <br><br>
+            
+            <a href="https://vimeo.com/92538719" target="_blank">
+                Stereoteístas - No Info
+            </a>
+            
+            <br><br>
+            
+            <a href="https://www.youtube.com/watch?v=Gur1qP_1uGM" target="_blank">
+                El ecosistema de un gallo
+            </a>
+       
+        `;
+
+        img.style.display = "block";
+
+        img.src =
+        "https://images.prismic.io/minicomponente/agtjbqYofJOwHV_q_hirada-hirao-0105-swan.jpg?auto=format,compress";
+
+    } else if (type === "prensa") {
+
+        title.innerText = "PRENSA";
+
+        text.innerHTML = `
+            <a href="https://pitchfork.com/reviews/albums/various-artists-fantologia-i/" target="_blank">
+                Fantologia I - Pitchfork
+            </a>
+
+            <br><br>
+
+            <a href="https://www.vice.com/es/article/el-eterno-femenino-11-minicomponente-hazlo-tu-misma-1/" target="_blank">
+                El Eterno Femenino #11 - Vice
+            </a>
+
+            <br><br>
+
+            <a href="https://www.vice.com/es/article/desde-buenos-aires-5-productores-imperdibles-de-electronica-experimental/" target="_blank">
+                Desde Bs As, 5 productores imperdibles - Vice
+            </a>
+
+            <br><br>
+
+            <a href="https://www.vice.com/es/article/lo-mejor-de-la-electronica-latinoamericana-2018/" target="_blank">
+                Lo mejor de la electrónica latinoamericana - Noisey
+            </a>
+
+            <br><br>
+
+            <a href="https://www.pagina12.com.ar/diario/suplementos/no/12-8607-2016-05-26.html" target="_blank">
+                Minicomponente, agente del caos - Página/12
+            </a>
+              <br><br>
+            
+        `;
+        
+        img.style.display = "block";
+
+        img.src =
+        "https://images.prismic.io/minicomponente/agcizqYofJOwHRls_Minicomponente-lake01_Paula-Zustovich_PH-Sebastian-Lovero-effectapp-2-.png?auto=format,compress";
+
+    } else if (type === "investigacion") {
+
+        title.innerText = "INVESTIGACIÓN";
+
+        text.innerText =
+        "Proyectos y trabajos académicos.";
+    }
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+/* POSICIONES RANDOM GIFS */
+
+const floaters = document.querySelectorAll(".floaty");
+
+floaters.forEach(floater => {
+
+    /* tamaño random */
+    const size = Math.random() * 120 + 40;
+
+    floater.style.width = size + "px";
+
+    /* posición random */
+    floater.style.left = Math.random() * 90 + "%";
+    floater.style.top = Math.random() * 90 + "%";
+
+    /* velocidad random */
+    floater.style.animationDuration =
+        (Math.random() * 5 + 3) + "s";
+
+});
+
+</script>
+
+</body>
+</html>
